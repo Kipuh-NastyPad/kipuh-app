@@ -27,6 +27,10 @@ import InputGroupAddon from 'primevue/inputgroupaddon'
 import InputText from 'primevue/inputtext'
 import InputNumber from 'primevue/inputtext'
 import Dropdown from 'primevue/dropdown'
+import IconField from 'primevue/iconfield'
+import InputIcon from 'primevue/inputicon'
+import Tag from 'primevue/tag'
+import FileUpload from 'primevue/fileupload'
 
 // For DataTable
 import Column from 'primevue/column'
@@ -58,5 +62,10 @@ app.component('pv-input-group-addon', InputGroupAddon)
 app.component('pv-input-text', InputText)
 app.component('pv-input-number', InputNumber)
 app.component('pv-dropdown', Dropdown)
+app.component('pv-input-icon', InputIcon)
+app.component('pv-icon-field', IconField)
+app.component('pv-tag', Tag)
+app.component('pv-dynamic-dialog', DynamicDialog)
+app.component('pv-file-upload', FileUpload)
 
 app.mount('#app')
