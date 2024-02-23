@@ -19,7 +19,7 @@
           subOptions: []
         }
       },
-      { values: { optionName: 'Products', optionIcon: 'bi bi-cart', subOptions: [{ suboptionName: 'New', suboptionIcon: 'bi bi-plus' }] } }
+      { values: { optionName: 'Products', optionIcon: 'bi bi-cart', subOptions: [{ suboptionName: 'New', suboptionIcon: 'bi bi-plus', routeName: '' }] } }
     ])
     </script>
     <style scoped></style>

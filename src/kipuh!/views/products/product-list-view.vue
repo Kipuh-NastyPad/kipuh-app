@@ -34,7 +34,7 @@
 
         <pv-column>
           <template #body="{ data }">
-            <img :src="data.image" alt="" width="100" />
+            <img :src="data.image" alt="" width="70" />
           </template>
         </pv-column>
         <pv-column field="price" header="Price"></pv-column>
@@ -56,11 +56,14 @@
   </form>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useField, useForm } from 'vee-validate'
 import KipuhValidator from '@/utils/validator/kipuh-validator'
 
 const { handleSubmit } = useForm()
+
+import ReniecService from '@/kipuh!/services/reniec.service'
+import reniecService from '@/kipuh!/services/reniec.service'
 
 const products = ref([
   {
@@ -93,7 +96,8 @@ const products = ref([
   },
   {
     productName: 'Picaras 320g',
-    image: 'https://corporacionliderperu.com/45577-large_default/picaras-galletas-chocolate-x-320-gr-pack-x-8-un.jpg',
+    image:
+      'https://corporacionliderperu.com/45577-large_default/picaras-galletas-chocolate-x-320-gr-pack-x-8-un.jpg',
     price: '7',
     quantity: 2,
     totalPrice: 14
@@ -145,5 +149,12 @@ const fields = ref({
 const submitChanges = handleSubmit((values) => {
   console.log(values)
 })
+
+onMounted(() => {
+  // reniecService.getDNI(73254929).then((res): any => {
+  //   console.log(res.data)
+  // })
+})
+
 </script>
 <style scoped></style>

@@ -1,6 +1,9 @@
 <template>
   <div class="px-1 pt-1 w-full text-white">
-    <div @click="toggleSuboptions()" class="flex gap-2 align-items-center p-3 bg-yellow-600 hover:bg-yellow-800 border-round">
+    <div
+      @click="toggleSuboptions()"
+      class="flex gap-2 align-items-center p-3 bg-yellow-600 hover:bg-yellow-800 border-round"
+    >
       <i :class="optionIcon" class="text-2xl"></i>
       <span>{{ props.optionName }}</span>
     </div>
@@ -26,7 +29,7 @@ import { ref } from 'vue'
 interface KipuhOptionProps {
   optionName: string | 'xdxd'
   optionIcon: string | null
-  subOptions: Array<{ suboptionName: string; suboptionIcon: string }>
+  subOptions: Array<{ suboptionName: string; suboptionIcon: string; routeName: string }>
 }
 
 const toggleSuboptionsStatus = ref(false)

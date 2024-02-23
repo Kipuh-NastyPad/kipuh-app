@@ -16,6 +16,7 @@
       class="border-none"
       style="height: calc(100vh - 70px); align-self: end"
       v-model:visible="visible"
+      :modal="false"
     >
       <template #container>
         <kipuh-sidebar></kipuh-sidebar>
