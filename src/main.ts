@@ -19,14 +19,44 @@ import 'bootstrap-icons/font/bootstrap-icons.min.css'
 // Components
 import Button from 'primevue/button'
 import Sidebar from 'primevue/sidebar'
+import DataTable from 'primevue/datatable'
+import DynamicDialog from 'primevue/dynamicdialog'
+import Toast from 'primevue/toast'
+import InputGroup from 'primevue/inputgroup'
+import InputGroupAddon from 'primevue/inputgroupaddon'
+import InputText from 'primevue/inputtext'
+import InputNumber from 'primevue/inputtext'
+import Dropdown from 'primevue/dropdown'
+
+// For DataTable
+import Column from 'primevue/column'
+import ColumnGroup from 'primevue/columngroup' // optional
+import Row from 'primevue/row'
+
+// Services
+import DialogService from 'primevue/dialogservice'
+import ToastService from 'primevue/toastservice'
 
 const app = createApp(App)
 
 app.use(createPinia())
 app.use(PrimeVue, { ripple: true })
+app.use(DialogService)
+app.use(ToastService)
 app.use(router)
 
 app.component('pv-button', Button)
 app.component('pv-sidebar', Sidebar)
+app.component('pv-data-table', DataTable)
+app.component('pv-column', Column)
+app.component('pv-column-group', ColumnGroup)
+app.component('pv-row', Row)
+app.component('pv-dynamic-dialog', DynamicDialog)
+app.component('pv-toast', Toast)
+app.component('pv-input-group', InputGroup)
+app.component('pv-input-group-addon', InputGroupAddon)
+app.component('pv-input-text', InputText)
+app.component('pv-input-number', InputNumber)
+app.component('pv-dropdown', Dropdown)
 
 app.mount('#app')
