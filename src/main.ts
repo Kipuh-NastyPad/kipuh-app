@@ -65,7 +65,6 @@ app.component('pv-dropdown', Dropdown)
 app.component('pv-input-icon', InputIcon)
 app.component('pv-icon-field', IconField)
 app.component('pv-tag', Tag)
-app.component('pv-dynamic-dialog', DynamicDialog)
 app.component('pv-file-upload', FileUpload)
 
 app.mount('#app')
